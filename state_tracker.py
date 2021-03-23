@@ -20,3 +20,10 @@ class StateTracker:
 
         """
 
+    def reset(self):
+        """Resets current_informs, history and round_num."""
+
+        self.current_informs = {}
+        # A list of the dialogues (dicts) by the agent and user so far in the conversation
+        self.history = []
+        self.round_num = 0
