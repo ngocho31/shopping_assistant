@@ -5,6 +5,7 @@ import random
 
 from utils import DEBUG_PRINT, SAVE_LOG
 from user_simulator import UserSimulator
+from error_model_controller import ErrorModelController
 from dqn_agent import DQNAgent
 from state_tracker import StateTracker
 
@@ -46,7 +47,7 @@ if __name__ == "__main__":
     database= json.load(open(DATABASE_FILE_PATH, encoding='utf-8'))
 
     # Load product dict
-    # db_dict = json.load(open(DICT_FILE_PATH, encoding='utf-8'))
+    db_dict = json.load(open(DICT_FILE_PATH, encoding='utf-8'))
 
     # Load goal File
     user_goals = json.load(open(USER_GOALS_FILE_PATH, encoding='utf-8'))
@@ -58,86 +59,137 @@ if __name__ == "__main__":
     if USE_USERSIM:
         user = UserSimulator(user_goals, constants, database)
 
+    emc = ErrorModelController(db_dict, constants)
     state_tracker = StateTracker(database, constants)
     dqn_agent = DQNAgent(state_tracker.get_state_size(), constants)
 
 
 def episode_reset():
     """
-    Resets the episode/conversation in the warmup.
+    Resets the episode/conversation in the training loops.
 
-    Called in warmup to reset the state tracker, user and agent.
+    Called in warmup and train to reset the state tracker, user and agent. Also get's the initial user action.
 
     """
 
     # First reset the state tracker
     state_tracker.reset()
-    # Reset user
-    user.reset()
+    # Then pick an init user action
+    user_action = user.reset_train()
+    # Infuse with error
+    emc.infuse_error(user_action)
+    # DEBUG_PRINT("user:\t", user_action)
+    SAVE_LOG("user:\t", user_action, filename='test.log')
+    # And update state tracker
+    state_tracker.update_state_user(user_action)
     # Finally, reset agent
     dqn_agent.reset()
+
+
+def run_round(state, warmup=False):
+    # 1) Agent takes action given state tracker's representation of dialogue (state)
+    agent_action_index, agent_action = dqn_agent.get_action_warmup(state)
+    SAVE_LOG("agent:\t", agent_action, filename='test.log')
+    # 2) Update state tracker with the agent's action
+    state_tracker.update_state_agent_train(agent_action)
+
+    # 3) User takes action given agent action
+    user_action, reward, done, success = user.step(agent_action)
+    if not done:
+        # 4) Infuse error into semantic frame level of user action
+        emc.infuse_error(user_action)
+    # DEBUG_PRINT("user:\t", user_action)
+    SAVE_LOG("user:\t", user_action, filename='test.log')
+    # 5) Update state tracker with user action
+    state_tracker.update_state_user(user_action)
+    # 6) Get next state and add experience
+    next_state = state_tracker.get_state(done)
+    dqn_agent.add_experience(state, agent_action_index, reward, next_state, done)
+
+    return next_state, reward, done, success
 
 
 def warmup_run():
     """
     Runs the warmup stage of training which is used to fill the agents memory.
 
-    Using dialogs created based on defined rules in order to induce the agent's initial behavior.
-    Loop terminates when number of round is equal to NUM_EP_WARMUP or when the memory buffer is full.
+    The agent uses it's rule-based policy to make actions. The agent's memory is filled as this runs.
+    Loop terminates when the size of the memory is equal to WARMUP_MEM or when the memory buffer is full.
 
     """
 
     print('Warmup Started...')
     total_step = 0
-    for dialog in dialogs:
-        if total_step == NUM_EP_WARMUP or dqn_agent.is_memory_full():
-            break
-
-        SAVE_LOG("Start conversation!!!")
+    while total_step < NUM_EP_WARMUP and not dqn_agent.is_memory_full():
         # Reset episode
         episode_reset()
         done = False
-        reward_total = 0
-        # Pick an first user action
-        user_action, reward, done, success = user.pick_action(dialog[0])
-        SAVE_LOG("user:\t", user_action)
-        # DEBUG_PRINT("reward = %d" % reward + ", success = %s" % success)
-        # Add user action into history
-        state_tracker.update_state_user(user_action)
-        # After user action, get state from state tracker
-        state = state_tracker.get_state(done)
-        for i, action in enumerate(dialog):
-            if i == 0:
-                continue
-            if action['speaker'] == 'user':
-                # Pick an user action in defined dialog
-                user_action, reward, done, success = user.pick_action(action, agent_action)
-                SAVE_LOG("user:\t", user_action)
-                SAVE_LOG("success: ", success, ", reward: ", reward)
-                reward_total += reward
-                # DEBUG_PRINT("reward = %d" % reward + ", success = %s" % success)
-                # Add user action into history
-                state_tracker.update_state_user(user_action)
-                # After user action, get state from state tracker
-                next_state = state_tracker.get_state(done)
-                dqn_agent.add_experience(state, agent_action_index, reward, next_state, done)
-                state = next_state
-                # Finish conversation
-                if done:
-                    break
-            elif action['speaker'] == 'agent':
-                # Pick an agent action in defined dialog
-                agent_action_index, agent_action = dqn_agent.pick_action(action)
-                SAVE_LOG("agent:\t", agent_action)
-                # Add agent action into history
-                state_tracker.update_state_agent(agent_action)
-        SAVE_LOG("success: ", success, ", reward total: ", reward_total)
+        # Get initial state from state tracker
+        state = state_tracker.get_state()
+        while not done:
+            next_state, _, done, _ = run_round(state, warmup=True)
+            total_step += 1
+            state = next_state
+        # print(total_step)
 
-        total_step += 1
-
-    # After fill the agents memory, train model based on them, to initial agent's behavior
-    dqn_agent.train()
-    dqn_agent.save_weights()
+    print('...Warmup Ended')
 
 
-warmup_run()
+def train_run():
+    """
+    Runs the loop that trains the agent.
+
+    Trains the agent on the goal-oriented chatbot task. Training of the agent's neural network occurs every episode that
+    TRAIN_FREQ is a multiple of. Terminates when the episode reaches NUM_EP_TRAIN.
+
+    """
+
+    print('Training Started...')
+    episode = 0
+    period_reward_total = 0
+    period_success_total = 0
+    success_rate_best = 0
+
+    while episode < NUM_EP_TRAIN:
+        SAVE_LOG("Start conversation!!!", filename='test.log')
+        episode_reset()
+        episode += 1
+        done = False
+        state = state_tracker.get_state()
+        while not done:
+            next_state, reward, done, success = run_round(state)
+            period_reward_total += reward
+            state = next_state
+        # SAVE_LOG("success: ", success, ", reward total: ", period_reward_total, filename='train.log')
+
+        period_success_total += success
+
+        # Train
+        if episode % TRAIN_FREQ == 0:
+            # Check success rate
+            success_rate = period_success_total / TRAIN_FREQ
+            avg_reward = period_reward_total / TRAIN_FREQ
+            DEBUG_PRINT("episode: ", episode, ", success_rate = ", success_rate)
+            SAVE_LOG("episode: ", episode, ", success rate: ", success_rate, filename='train.log')
+
+            # Flush
+            if success_rate >= success_rate_best and success_rate >= SUCCESS_RATE_THRESHOLD:
+                DEBUG_PRINT("episode: ", episode, ", success_rate > threshold = ", success_rate)
+                dqn_agent.empty_memory()
+            # Update current best success rate
+            if success_rate > success_rate_best:
+                SAVE_LOG("Episode: ", episode, ", NEW BEST SUCCESS RATE: ", success_rate, ", Avg Reward: ", avg_reward, filename='train.log')
+                DEBUG_PRINT("episode: ", episode, ", new best success_rate = ", success_rate)
+                success_rate_best = success_rate
+                dqn_agent.save_weights()
+            period_success_total = 0
+            period_reward_total = 0
+            # Copy
+            dqn_agent.copy()
+            # Train
+            dqn_agent.train()
+
+    print('...Training Ended')
+
+
+train_run()
