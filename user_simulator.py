@@ -116,7 +116,7 @@ class UserSimulator:
                 if agent_action['intent'] == 'match_found':
                     self.constraint_check = SUCCESS
                     if user_response['intent'] == 'reject':
-                        success = UNSUITABLE
+                        success = FAIL
                         self.constraint_check = FAIL
                 elif agent_action['intent'] == 'done':
                     done = True
@@ -140,7 +140,7 @@ class UserSimulator:
         """
 
         self.goal = random.choice(self.goal_list)
-        # DEBUG_PRINT(self.goal)
+        DEBUG_PRINT(self.goal)
         # Add default slot to requests of goal
         self.goal['request_slots'][self.default_key] = 'UNK'
         if self.goal['intent'] == 'request':
@@ -271,11 +271,11 @@ class UserSimulator:
         for key in self.state['history_slots']:
             assert key not in self.state['rest_slots']
         # All slots in both rest and hist should contain the slots for goal
-        # for inf_key in self.goal['inform_slots']:
-        #     assert self.state['history_slots'].get(inf_key, False) or self.state['rest_slots'].get(inf_key, False)
-        # for req_key in self.goal['request_slots']:
-        #     assert self.state['history_slots'].get(req_key, False) or self.state['rest_slots'].get(req_key,
-        #                                                                                            False), req_key
+        for inf_key in self.goal['inform_slots']:
+            assert self.state['history_slots'].get(inf_key, False) or self.state['rest_slots'].get(inf_key, False)
+        for req_key in self.goal['request_slots']:
+            assert self.state['history_slots'].get(req_key, False) or self.state['rest_slots'].get(req_key,
+                                                                                                   False), req_key
         # Anything in the rest should be in the goal
         for key in self.state['rest_slots']:
             assert self.goal['inform_slots'].get(key, False) or self.goal['request_slots'].get(key, False)
@@ -367,8 +367,8 @@ class UserSimulator:
         #     success = UNSUITABLE
 
         # Add all informs (by agent too) to hist slots
-        if agent_inform_key == 'amount_product' and agent_inform_value == 'no match available':
-            agent_inform_value = 0
+        # if agent_inform_key == 'amount_product' and agent_inform_value == 'no match available':
+        #     agent_inform_value = 0
         self.state['history_slots'][agent_inform_key] = agent_inform_value
         # Remove from rest slots if in it
         self.state['rest_slots'].pop(agent_inform_key, None)
@@ -455,19 +455,20 @@ class UserSimulator:
             if key in self.no_query:
                 continue
             # Will return true if key not in agent informs OR if value does not match value of agent informs[key]
-            if key == "amount_product":
-                if value != agent_informs.get(key, None):
-                    self.constraint_check = FAIL
-                    break
-            elif agent_informs.get(key, None) == None:
-                self.constraint_check = FAIL
-                break
-            elif not check_match_sublist_and_substring(value, agent_informs.get(key, None)):
-                self.constraint_check = FAIL
-                break
-            # if value != agent_informs.get(key, None):
+            # if key == "amount_product":
+            #     if value > agent_informs.get(key, 0):
+            #         self.constraint_check = FAIL
+            #         break
+            #     # continue
+            # elif agent_informs.get(key, None) == None:
             #     self.constraint_check = FAIL
             #     break
+            # elif not check_match_sublist_and_substring(value, agent_informs.get(key, None)):
+            #     self.constraint_check = FAIL
+            #     break
+            if value != agent_informs.get(key, None):
+                self.constraint_check = FAIL
+                break
 
         if self.constraint_check == FAIL:
             self.state['intent'] = 'reject'
@@ -485,13 +486,15 @@ class UserSimulator:
         """
 
         if self.constraint_check == FAIL:
-            # DEBUG_PRINT("fail constraint")
+            DEBUG_PRINT("fail constraint")
             return FAIL
 
         if not self.state['rest_slots']:
             assert not self.state['request_slots']
         if self.state['rest_slots']:
-            # DEBUG_PRINT("fail remain slots")
+            # for key, val in self.state['rest_slots'].items():
+            #     if val == 'UNK':
+            DEBUG_PRINT("fail remain slots")
             return FAIL
 
         # TEMP: ----
@@ -505,19 +508,19 @@ class UserSimulator:
             assert value != None
             if key in self.no_query:
                 continue
-            if key == "amount_product":
-                if value != match.get(key, None):
-                    assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
-                    break
-            elif match.get(key, None) == None:
-                assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
-                break
-            elif not check_match_sublist_and_substring(value, match.get(key, None)):
-                assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
-                break
-            # if value != match.get(key, None):
+            # if key == "amount_product":
+            #     if value > match.get(key, None):
+            #         assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
+            #         break
+            # elif match.get(key, None) == None:
             #     assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
             #     break
+            # elif not check_match_sublist_and_substring(value, match.get(key, None)):
+            #     assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
+            #     break
+            if value != match.get(key, None):
+                assert True is False, 'match: {}\ngoal: {}'.format(match, self.goal)
+                break
         # ----------
 
         return SUCCESS

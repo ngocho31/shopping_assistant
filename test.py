@@ -92,7 +92,7 @@ def test_warmup():
         # Agent takes action given state tracker's representation of dialogue
         agent_action_index, agent_action = dqn_agent.get_action_train(state)
         # Update state tracker with the agent's action
-        state_tracker.update_state_agent(agent_action)
+        state_tracker.update_state_agent_test(agent_action)
         print("agent: {}".format(str(agent_action)))
 
         # User takes action given agent action

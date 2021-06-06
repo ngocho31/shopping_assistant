@@ -194,14 +194,24 @@ class DQNAgent:
                 t = beh_state_preds[i]
                 predict = beh_state_preds[i]
                 q = beh_state_preds[i][a]
-                SAVE_LOG("next state = ", s_)
+                SAVE_LOG("next state = ", \
+                "\nuser intent: ", s_[:6], "\ninform: ", s_[6:13], "\nrequest: ", s_[13:20], \
+                "\nagent intent: ", s_[20:26], "\ninform: ", s_[26:33], "\nrequest: ", s_[33:40], \
+                "\ncurrent inform: ", s_[40:47], \
+                "\nresult db: ", s_[68:76])
+                SAVE_LOG("Output predict = ", predict)
                 if not self.vanilla:
                     SAVE_LOG("Get action have Q max next state = ", beh_next_states_preds[i])
                     SAVE_LOG("Output predict next state = ", tar_next_state_preds[i])
                     t[a] = r + self.gamma * tar_next_state_preds[i][np.argmax(beh_next_states_preds[i])] * (not d)
                 else:
                     t[a] = r + self.gamma * np.amax(tar_next_state_preds[i]) * (not d)
-                SAVE_LOG("input state = ", s)
+                # SAVE_LOG("input state: ", s)
+                SAVE_LOG("input state: ", \
+                "\nuser intent: ", s[:6], "\ninform: ", s[6:13], "\nrequest: ", s[13:20], \
+                "\nagent intent: ", s[20:26], "\ninform: ", s[26:33], "\nrequest: ", s[33:40], \
+                "\ncurrent inform: ", s[40:47], \
+                "\nresult db: ", s[68:76])
                 SAVE_LOG("Output predict = ", predict)
                 # SAVE_LOG("Q* = ", t[a])
                 loss = t[a] - q

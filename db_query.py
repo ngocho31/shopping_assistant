@@ -59,6 +59,29 @@ class DBQuery:
                             return not_match
         return not_match
 
+    def _count_slot_values(self, key, db_subdict):
+        """
+        Return a dict of the different values and occurrences of each, given a key, from a sub-dict of database
+
+        Parameters:
+            key (string): The key to be counted
+            db_subdict (dict): A sub-dict of the database
+
+        Returns:
+            dict: The values and their occurrences given the key
+        """
+
+        slot_values = defaultdict(int)  # init to 0
+        for db in db_subdict:
+            current_option_dict = db
+            # If there is a match
+            if key in current_option_dict.keys():
+                slot_value = current_option_dict[key]
+                # This will add 1 to 0 if this is the first time this value has been encountered, or it will add 1
+                # to whatever was already in there
+                slot_values[slot_value] += 1
+        return slot_values
+
     def get_db_results_for_slots(self, current_informs):
         """
         Counts occurrences of each current inform slot (key and value) in the database items.
@@ -75,20 +98,21 @@ class DBQuery:
             dict: Each key in current_informs with the count of the number of matches for that key
         """
 
-        update_current_informs = copy.deepcopy(current_informs)
-        if 'amount_product' not in update_current_informs:
-            update_current_informs.update({'amount_product': 1})
+        # update_current_informs = copy.deepcopy(current_informs)
+        # if 'amount_product' not in update_current_informs:
+        #     update_current_informs.update({'amount_product': 1})
 
         # The items (key, value) of the current informs are used as a key to the cached_db_slot
-        tuple_current_informs = copy.deepcopy(current_informs)
-        if 'amount_product' not in tuple_current_informs:
-            tuple_current_informs.update({'amount_product': '1'})
-        else:
-            tuple_current_informs.update({'amount_product': str(tuple_current_informs['amount_product'])})
+        # tuple_current_informs = copy.deepcopy(current_informs)
+        # if 'amount_product' not in tuple_current_informs:
+        #     tuple_current_informs.update({'amount_product': '1'})
+        # else:
+        #     tuple_current_informs.update({'amount_product': str(tuple_current_informs['amount_product'])})
         # DEBUG_PRINT(tuple_current_informs)
-        inform_items = {k:tuple(v) for k,v in tuple_current_informs.items()}.items()
+        # inform_items = {k:tuple(v) for k,v in tuple_current_informs.items()}.items()
         # DEBUG_PRINT(inform_items)
-        inform_items = frozenset(inform_items)
+        # inform_items = frozenset(inform_items)
+        inform_items = frozenset(current_informs.items())
         # DEBUG_PRINT(inform_items)
 
         # A dict of the inform keys and their counts as stored (or not stored) in the cached_db_slot
@@ -100,7 +124,8 @@ class DBQuery:
 
         # If it made it down here then a new query was made and it must add it to cached_db_slot and return it
         # Init all key values with 0
-        db_results_slots = {key: 0.0 for key in update_current_informs.keys()}
+        # db_results_slots = {key: 0.0 for key in update_current_informs.keys()}
+        db_results_slots = {key: 0.0 for key in current_informs.keys()}
         db_results_slots['matching_all_constraints'] = 0
 
         # db_results is a dict of dict in the same exact format as the db, it is just a subset of the db
@@ -108,7 +133,7 @@ class DBQuery:
         # DEBUG_PRINT("db_results = ", db_results)
         for data in self.database:
             all_slots_match = True
-            for CI_key, CI_value in update_current_informs.items():
+            for CI_key, CI_value in current_informs.items():
                 # Skip if a no query item and all_slots_match stays true
                 if CI_key in self.no_query:
                     continue
@@ -117,12 +142,14 @@ class DBQuery:
                     db_results_slots[CI_key] += 1
                     continue
                 if CI_key in list(data.keys()):
-                    if CI_key == "amount_product":
-                        DEBUG_PRINT(CI_value)
-                        DEBUG_PRINT(data[CI_key])
-                        if CI_value <= data[CI_key]:
-                            db_results_slots[CI_key] += 1
-                    elif check_match_sublist_and_substring(CI_value,data[CI_key]):
+                    # if CI_key == "amount_product":
+                    #     # DEBUG_PRINT(CI_value)
+                    #     # DEBUG_PRINT(data[CI_key])
+                    #     if CI_value <= data[CI_key]:
+                    #         db_results_slots[CI_key] += 1
+                    # elif check_match_sublist_and_substring(CI_value,data[CI_key]):
+                    #     db_results_slots[CI_key] += 1
+                    if CI_value.lower() == data[CI_key].lower():
                         db_results_slots[CI_key] += 1
                     else:
                         all_slots_match = False
@@ -170,34 +197,41 @@ class DBQuery:
         # DEBUG_PRINT(db_results)
 
         filled_inform = {}
-        if not db_results:
-            filled_inform[key] = 'no match available'
+        values_dict = self._count_slot_values(key, db_results)
+        DEBUG_PRINT("values_dict: ", values_dict)
+        if values_dict:
+            # Get key with max value (ie slot value with highest count of available results)
+            filled_inform[key] = max(values_dict, key=values_dict.get)
         else:
-            not_match = self._check_constraints(key, db_results, entity_list)
-            # if need inform, query db, inform all of the possible value
-            if not_match:
-                constraints = True
-                for constraint in entity_list[key]:
-                    # DEBUG_PRINT(constraint)
-                    # DEBUG_PRINT(current_informs)
-                    if constraint not in current_informs:
-                        filled_inform[key] = 'no match available'
-                        constraints = False
-                if constraints:
-                    item = random.choice(db_results)
-                    filled_inform.update({key: item[key]})
-            else:
-                value = []
-                for item in db_results:
-                    if type(item[key]) == list:
-                        for x in item[key]:
-                            if not value.__contains__(x):
-                                value.append(x)
-                    else:
-                        value.append(item[key])
-                filled_inform.update({key: value})
+            filled_inform[key] = 'no match available'
+        # if not db_results:
+        #     filled_inform[key] = 'no match available'
+        # else:
+        #     not_match = self._check_constraints(key, db_results, entity_list)
+        #     # if need inform, query db, inform all of the possible value
+        #     if not_match:
+        #         constraints = True
+        #         for constraint in entity_list[key]:
+        #             # DEBUG_PRINT(constraint)
+        #             # DEBUG_PRINT(current_informs)
+        #             if constraint not in current_informs:
+        #                 filled_inform[key] = 'no match available'
+        #                 constraints = False
+        #         if constraints:
+        #             item = random.choice(db_results)
+        #             filled_inform.update({key: item[key]})
+        #     else:
+        #         value = []
+        #         for item in db_results:
+        #             if type(item[key]) == list:
+        #                 for x in item[key]:
+        #                     if not value.__contains__(x):
+        #                         value.append(x)
+        #             else:
+        #                 value.append(item[key])
+        #         filled_inform.update({key: value})
 
-        # DEBUG_PRINT("result: ", filled_inform)
+        DEBUG_PRINT("result: ", filled_inform)
         return filled_inform
 
     def get_db_results(self, constraints):
@@ -216,14 +250,18 @@ class DBQuery:
 
         # Filter non-queryable items and keys with the value 'anything' since those are inconsequential to the constraints
         new_constraints = {k: v for k, v in constraints.items() if k not in self.no_query and v != 'anything'}
-        if 'amount_product' not in list(new_constraints.keys()):
-            new_constraints.update({'amount_product': 1})
+        
+        if len(list(new_constraints.keys())) == 0:
+            DEBUG_PRINT("constraints = ", constraints)
+            # return []
+        # if 'amount_product' not in list(new_constraints.keys()):
+        #     new_constraints.update({'amount_product': 1})
         # DEBUG_PRINT("new_constraints = ", new_constraints)
 
-        tuple_current_informs = copy.deepcopy(new_constraints)
-        tuple_current_informs.update({'amount_product': str(tuple_current_informs['amount_product'])})
-        inform_items = {k:tuple(v) for k,v in tuple_current_informs.items()}.items()
-        inform_items = frozenset(inform_items)
+        # tuple_current_informs = copy.deepcopy(new_constraints)
+        # tuple_current_informs.update({'amount_product': str(tuple_current_informs['amount_product'])})
+        # inform_items = {k:tuple(v) for k,v in tuple_current_informs.items()}.items()
+        inform_items = frozenset(new_constraints.items())
         # DEBUG_PRINT(inform_items)
 
         cache_return = self.cached_db[inform_items]
@@ -248,14 +286,19 @@ class DBQuery:
             current_option_dict = data
             # First check if that database item actually contains the inform keys
             # Note: this assumes that if a constraint is not found in the db item then that item is not a match
+            DEBUG_PRINT(set(new_constraints.keys()))
+            DEBUG_PRINT(set(data.keys()))
+            DEBUG_PRINT(len(set(new_constraints.keys()) - set(data.keys())))
             if len(set(new_constraints.keys()) - set(data.keys())) == 0:
                 match = True
                 # Now check all the constraint values against the db values and if there is a mismatch don't store
                 for k, v in new_constraints.items():
-                    if k == "amount_product":
-                        if v > data[k]:
-                            match = False
-                    elif not check_match_sublist_and_substring(v, data[k]):
+                    # if k == "amount_product":
+                    #     if v > data[k]:
+                    #         match = False
+                    # elif not check_match_sublist_and_substring(v, data[k]):
+                    #     match = False
+                    if str(v).lower() != str(current_option_dict[k]).lower():
                         match = False
                 if match:
                     # Update cache

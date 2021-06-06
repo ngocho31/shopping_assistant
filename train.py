@@ -39,6 +39,7 @@ if __name__ == "__main__":
     run_dict = constants['run']
     USE_USERSIM = run_dict['usersim']
     NUM_EP_WARMUP = run_dict['num_ep_warmup'] # number of episode in warmup
+    USE_RULE = run_dict['use_rule'] # using based rule action
     NUM_EP_TRAIN = run_dict['num_ep_run']
     TRAIN_FREQ = run_dict['train_freq']
     SUCCESS_RATE_THRESHOLD = run_dict['success_rate_threshold']
@@ -78,7 +79,7 @@ def episode_reset():
     user_action = user.reset_train()
     # Infuse with error
     emc.infuse_error(user_action)
-    # DEBUG_PRINT("user:\t", user_action)
+    DEBUG_PRINT("user:\t", user_action)
     SAVE_LOG("user:\t", user_action, filename='test.log')
     # And update state tracker
     state_tracker.update_state_user(user_action)
@@ -86,20 +87,86 @@ def episode_reset():
     dqn_agent.reset()
 
 
-def run_round(state, warmup=False):
+def episode_reset_warmup(user_action=None, use_rule=False):
+    """
+    Resets the episode/conversation in the warmup.
+
+    Called in warmup to reset the state tracker, user and agent.
+
+    """
+
+    # First reset the state tracker
+    state_tracker.reset()
+    # Reset user
+    # user.reset()
+    if use_rule:
+        user_action = user.reset_warmup(use_rule)
+        # DEBUG_PRINT(user_action)
+        # Infuse with error
+        emc.infuse_error(user_action)
+    else:
+        user.reset_warmup()
+        user.pick_action(user_action)
+    # DEBUG_PRINT(user_action)
+    SAVE_LOG("user:\t", user_action, filename='warmup.log')
+    # And update state tracker
+    state_tracker.update_state_user(user_action)
+    # Finally, reset agent
+    dqn_agent.reset()
+
+
+def run_round(state):
     # 1) Agent takes action given state tracker's representation of dialogue (state)
-    agent_action_index, agent_action = dqn_agent.get_action_warmup(state)
-    SAVE_LOG("agent:\t", agent_action, filename='test.log')
+    agent_action_index, agent_action = dqn_agent.get_action_train(state)
+    DEBUG_PRINT("agent:\t", agent_action)
     # 2) Update state tracker with the agent's action
     state_tracker.update_state_agent_train(agent_action)
 
+    DEBUG_PRINT("agent:\t", agent_action)
+    SAVE_LOG("agent:\t", agent_action, filename='test.log')
+
     # 3) User takes action given agent action
     user_action, reward, done, success = user.step(agent_action)
+    DEBUG_PRINT("user:\t", user_action)
     if not done:
         # 4) Infuse error into semantic frame level of user action
         emc.infuse_error(user_action)
+    DEBUG_PRINT("user (error):\t", user_action)
+    SAVE_LOG("user (error):\t", user_action, filename='test.log')
+    # 5) Update state tracker with user action
+    state_tracker.update_state_user(user_action)
+    # 6) Get next state and add experience
+    next_state = state_tracker.get_state(done)
+    dqn_agent.add_experience(state, agent_action_index, reward, next_state, done)
+
+    return next_state, reward, done, success
+
+
+def run_round_warmup(state, agent_action=None, user_action=None, use_rule=False):
+    # 1) Agent takes action given state tracker's representation of dialogue (state)
+    if use_rule:
+        agent_action_index, agent_action = dqn_agent.get_action_warmup(state)
+    else:
+        # Pick an agent action in defined dialog
+        agent_action_index, agent_action = dqn_agent.pick_action(agent_action)
+    # 2) Update state tracker with the agent's action
+    state_tracker.update_state_agent_warmup(agent_action, use_rule)
+    SAVE_LOG("agent:\t", agent_action, filename='warmup.log')
+    # DEBUG_PRINT("agent:\t", agent_action)
+    # 3) User takes action given agent action
+    if use_rule:
+        user_action, reward, done, success = user.step(agent_action)
+    else:
+        # Pick an user action in defined dialog
+        user_action, reward, done, success = user.pick_action(user_action, agent_action)
     # DEBUG_PRINT("user:\t", user_action)
-    SAVE_LOG("user:\t", user_action, filename='test.log')
+    # DEBUG_PRINT("reward:\t", reward)
+    SAVE_LOG("reward:\t", reward, filename='warmup.log')
+    if not done:
+        # 4) Infuse error into semantic frame level of user action
+        emc.infuse_error(user_action)
+        # DEBUG_PRINT("user (error):\t", user_action)
+        SAVE_LOG("user (error):\t", user_action, filename='warmup.log')
     # 5) Update state tracker with user action
     state_tracker.update_state_user(user_action)
     # 6) Get next state and add experience
@@ -119,18 +186,34 @@ def warmup_run():
     """
 
     print('Warmup Started...')
-    total_step = 0
-    while total_step < NUM_EP_WARMUP and not dqn_agent.is_memory_full():
-        # Reset episode
-        episode_reset()
-        done = False
-        # Get initial state from state tracker
-        state = state_tracker.get_state()
-        while not done:
-            next_state, _, done, _ = run_round(state, warmup=True)
-            total_step += 1
-            state = next_state
-        # print(total_step)
+    episode = 0
+    while episode != NUM_EP_WARMUP and not dqn_agent.is_memory_full():
+        SAVE_LOG("Start conversation!!!", filename='warmup.log')
+        if USE_RULE:
+            # Reset episode
+            episode_reset_warmup(use_rule=USE_RULE)
+            done = False
+            # Get initial state from state tracker
+            state = state_tracker.get_state()
+            while not done:
+                next_state, _, done, _ = run_round_warmup(state, use_rule=USE_RULE)
+                state = next_state
+            episode += 1
+        else:
+            if episode == len(dialogs):
+                episode = 0
+            dialog = dialogs[episode]
+            # Reset episode
+            episode_reset_warmup(dialog[0])
+            done = False
+            # Get initial state from state tracker
+            state = state_tracker.get_state()
+            i = 1
+            while not done:
+                next_state, _, done, _ = run_round_warmup(state=state, agent_action=dialog[i], user_action=dialog[i+1])
+                state = next_state
+                i += 2
+            episode += 1
 
     print('...Warmup Ended')
 
@@ -160,6 +243,7 @@ def train_run():
             next_state, reward, done, success = run_round(state)
             period_reward_total += reward
             state = next_state
+        DEBUG_PRINT("success: ", success)
         # SAVE_LOG("success: ", success, ", reward total: ", period_reward_total, filename='train.log')
 
         period_success_total += success
@@ -191,5 +275,5 @@ def train_run():
 
     print('...Training Ended')
 
-
+warmup_run()
 train_run()

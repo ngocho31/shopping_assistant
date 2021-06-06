@@ -73,11 +73,12 @@ class ErrorModelController:
         """
 
         # print("caller ErrorModelController _slot_value_noise")
-        val = random.choice(self.shopping_dict[key])
-        if key == 'amount_product':
-            informs_dict.update({key: val})
-        else:
-            informs_dict.update({key: [val]})
+        informs_dict[key] = random.choice(self.shopping_dict[key])
+        # val = random.choice(self.shopping_dict[key])
+        # if key == 'amount_product':
+        #     informs_dict.update({key: val})
+        # else:
+        #     informs_dict.update({key: [val]})
 
     def _slot_noise(self, key, informs_dict):
         """
@@ -91,8 +92,9 @@ class ErrorModelController:
         # print("caller ErrorModelController _slot_noise")
         informs_dict.pop(key)
         random_slot = random.choice(list(self.shopping_dict.keys()))
-        val = random.choice(self.shopping_dict[random_slot])
-        informs_dict[random_slot] = [val]
+        informs_dict[random_slot] = random.choice(self.shopping_dict[random_slot])
+        # val = random.choice(self.shopping_dict[random_slot])
+        # informs_dict[random_slot] = [val]
 
     def _slot_remove(self, key, informs_dict):
         """

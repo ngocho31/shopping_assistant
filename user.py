@@ -28,7 +28,7 @@ class User:
         """
         Asks user in console for response then receives a response as input.
 
-        Format must be like this: request/moviename: room, date: friday/starttime, city, theater
+        Format must be like this: request/moviename: room; date: friday/starttime, city, theater
         or inform/moviename: zootopia/
         or request//starttime
         or done//
@@ -50,18 +50,22 @@ class User:
 
             informs_correct = True
             if len(chunks[1]) > 0:
-                print(chunks[1])
-                informs_items_list = chunks[1].split('**')
-                print(informs_items_list)
+                # print(chunks[1])
+                informs_items_list = chunks[1].split(', ')
+                # print(informs_items_list)
 
                 for inf in informs_items_list:
                     # print(inf)
-                    inf = inf.split(':: ')
+                    inf = inf.split(': ')
                     # print(inf)
                     if inf[0] not in all_slots:
                         informs_correct = False
                         break
-                    response['inform_slots'][inf[0]] = inf[1].split('||')
+                    # inf1 = inf[1].split(', ')
+                    # if inf[0] == 'amount_product':
+                    #     if len(inf1) == 1:
+                    #         inf1 = int(inf1[0])
+                    response['inform_slots'][inf[0]] = inf[1]
 
             requests_correct = True
             if len(chunks[2]) > 0:

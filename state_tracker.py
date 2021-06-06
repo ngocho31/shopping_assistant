@@ -38,7 +38,7 @@ class StateTracker:
         """Resets current_informs, history and round_num."""
 
         self.current_informs = {}
-        self.current_requests = []
+        # self.current_requests = []
         # A list of the dialogues (dicts) by the agent and user so far in the conversation
         self.history = []
         self.round_num = 0
@@ -76,7 +76,7 @@ class StateTracker:
         DEBUG_PRINT(user_action)
         # Check with all slots are informed by user, finding a product in database is exist
         db_results_dict = self.db_helper.get_db_results_for_slots(self.current_informs)
-        # DEBUG_PRINT("db_results_dict = ", db_results_dict)
+        DEBUG_PRINT("db_results_dict = ", db_results_dict)
 
         last_agent_action = self.history[-2] if len(self.history) > 1 else None
         DEBUG_PRINT(last_agent_action)
@@ -134,7 +134,7 @@ class StateTracker:
         for key in db_results_dict.keys():
             if key in self.slots_dict:
                 kb_count_rep[self.slots_dict[key]] = db_results_dict[key] / 100.
-        # DEBUG_PRINT(kb_count_rep)
+        DEBUG_PRINT(kb_count_rep)
 
         # Representation of DB query results (binary)
         kb_binary_rep = np.zeros((self.num_slots + 1,)) + np.sum(db_results_dict['matching_all_constraints'] > 0.)
@@ -144,16 +144,16 @@ class StateTracker:
         # DEBUG_PRINT(kb_binary_rep)
 
         state_representation = np.hstack(
-            [user_act_rep, user_inform_slots_rep, user_request_slots_rep, # 3/6/6
-            agent_act_rep, agent_inform_slots_rep, agent_request_slots_rep, # 3/6/6
-            current_informs_slots_rep, 
+            [user_act_rep, user_inform_slots_rep, user_request_slots_rep, # 6/7/7
+            agent_act_rep, agent_inform_slots_rep, agent_request_slots_rep, # 6/7/7
+            current_informs_slots_rep, # 7
             # current_requests_slots_rep, # 6/6
             # current_informs_slots_rep, # 6/6
             turn_rep, turn_onehot_rep, # 1/20
-            kb_count_rep, kb_binary_rep # 7/7
+            kb_binary_rep, kb_count_rep # 7/7
             ]).flatten()
         # DEBUG_PRINT("-----state-----")
-        # DEBUG_PRINT(state_representation)
+        DEBUG_PRINT(state_representation)
         # DEBUG_PRINT("size state_representation = ", len(state_representation))
         return state_representation
 
@@ -233,12 +233,12 @@ class StateTracker:
             key, value = list(agent_action['inform_slots'].items())[0]  # Only one
             assert key != 'match_found'
             assert value != 'PLACEHOLDER', 'KEY: {}'.format(key)
-            if key == 'amount_product':
-                if value == 'no match available':
-                    value = 0
-                else:
-                    value = 1
-                    agent_action['inform_slots'][key] = value
+            # if key == 'amount_product':
+            #     if value == 'no match available':
+            #         value = 0
+            #     else:
+            #         value = 1
+            #         agent_action['inform_slots'][key] = value
             self.current_informs[key] = value
             # for slot in agent_action['inform_slots']:
             #     if self.current_requests.__contains__(slot):
@@ -251,10 +251,10 @@ class StateTracker:
                 # Arbitrarily pick the first value of the dict
                 dict_items = db_results[0]
                 agent_action['inform_slots'] = copy.deepcopy(dict_items)
-                if 'amount_product' not in list(self.current_informs.keys()):
-                    agent_action['inform_slots'].pop('amount_product')
-                else:
-                    agent_action['inform_slots'].update({'amount_product': self.current_informs['amount_product']})
+                # if 'amount_product' not in list(self.current_informs.keys()):
+                #     agent_action['inform_slots'].pop('amount_product')
+                # else:
+                #     agent_action['inform_slots'].update({'amount_product': self.current_informs['amount_product']})
                 agent_action['inform_slots'][self.match_key] = str(agent_action['inform_slots'])
             else:
                 agent_action['inform_slots'][self.match_key] = 'no match available'

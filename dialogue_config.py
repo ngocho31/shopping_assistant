@@ -23,7 +23,8 @@ usersim_required_init_inform_keys = ['name_product']
 
 # Possible inform and request slots for the agent
 agent_inform_slots = ['name_product', 'size_product', 'color_product', 
-                    'material_product', 'cost_product', 'amount_product', 
+                    'material_product', 'cost_product', 
+                    # 'amount_product', 
                     usersim_default_key]
 # agent_inform_slots = ['cost_product']
 agent_request_slots = ['name_product', 'size_product', 'color_product', 
@@ -43,10 +44,11 @@ for slot in agent_request_slots:
     agent_actions.append({'intent': 'request', 'inform_slots': {}, 'request_slots': {slot: 'UNK'}})
 
 # Rule-based policy request list
-rule_requests = ['name_product', 'size_product', 'color_product', 'amount_product']
+rule_requests = ['name_product', 'size_product', 'color_product', 
+                'material_product', 'cost_product', 'amount_product']
 
 # These are possible inform slot keys that cannot be used to query
-no_query_keys = [usersim_default_key]
+no_query_keys = ['amount_product', usersim_default_key]
 
 #######################################
 # Global config

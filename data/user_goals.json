@@ -3,730 +3,721 @@
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set hồng vest váy ngắn"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "color_product": [
-                "hồng"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "set vest kèm quần",
+            "size_product": "M",
+            "color_product": "đen",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set xanh cỗ chữ v"
-            ]
+            "name_product": "set áo trắng cổ chữ v kèm quần",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set dây kèm quần"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "color_product": [
-                "cam"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 27
+            "name_product": "đầm trắng dập ly tay phồng",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set đen kim tuyến"
-            ],
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "set xanh cỗ chữ v",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm trắng dập ly tay phồng"
-            ],
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ]
+            "name_product": "đầm nude cổ vest dáng dài",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "280",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set đen kim tuyến"
-            ]
+            "name_product": "set vest nơ viền",
+            "size_product": "M",
+            "color_product": "đen viền",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm nude cổ vest dáng dài"
-            ],
-            "size_product": [
-                "S"
-            ]
+            "name_product": "set cổ xéo",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "195",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm hoa"
-            ]
+            "name_product": "set dây kèm quần",
+            "size_product": "S",
+            "color_product": "đen viền",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set trắng cổ nơ"
-            ],
-            "size_product": [
-                "S"
-            ]
+            "name_product": "đầm trắng 2 dây dáng xòe",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set áo trắng cổ chữ v kèm quần"
-            ],
-            "size_product": [
-                "M"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 55
+            "name_product": "set sơ mi",
+            "size_product": "M",
+            "color_product": "trắng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm xòe nút"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "color_product": [
-                "xám"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "set vest kèm quần",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm nude lưới tay phồng"
-            ]
+            "name_product": "đầm nude lưới tay phồng",
+            "size_product": "S",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm xòe cổ nâu"
-            ],
-            "size_product": [
-                "M"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 48
+            "name_product": "set sơ mi",
+            "size_product": "M",
+            "color_product": "trắng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set cổ xéo"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "195"
-            ]
+            "name_product": "đầm body đen lưới",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "2"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm xòe nút"
-            ],
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "xám"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "set hồng vest váy ngắn",
+            "size_product": "L",
+            "color_product": "hồng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm xoắn eo"
-            ],
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "nude"
-            ]
+            "name_product": "set vest kèm quần",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set sơ mi"
-            ],
-            "size_product": [
-                "M"
-            ]
+            "name_product": "đầm nude cổ vest dáng dài",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "280",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm body đen lưới"
-            ]
+            "name_product": "đầm xòe nút",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set trắng cổ nơ"
-            ]
+            "name_product": "set dây kèm quần",
+            "size_product": "M",
+            "color_product": "cam",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set dây kèm quần"
-            ],
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "cam"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 26
+            "name_product": "đầm xoắn eo",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set vest nơ viền"
-            ],
-            "size_product": [
-                "L"
-            ]
+            "name_product": "đầm xanh caro cổ vest",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "M"
-            ]
+            "name_product": "set vest kèm quần",
+            "size_product": "S",
+            "color_product": "đen",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "amount_product": 37,
-            "cost_product": [
-                "260"
-            ],
-            "name_product": [
-                "đầm trắng dập ly tay phồng"
-            ],
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "set dây kèm quần",
+            "size_product": "S",
+            "color_product": "cam",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "đầm trắng 2 dây dáng xòe",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "size_product": [
-                "S"
-            ],
-            "color_product": [
-                "xám"
-            ]
+            "name_product": "đầm body đen lưới",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "size_product": [
-                "S"
-            ]
+            "name_product": "đầm xòe nút",
+            "size_product": "L",
+            "color_product": "xám",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "amount_product": 27,
-            "color_product": [
-                "xanh"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "name_product": [
-                "set dây kèm quần"
-            ]
+            "name_product": "set vest kèm quần",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "set body vest"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "S"
-            ]
+            "name_product": "set vest nơ viền",
+            "size_product": "M",
+            "color_product": "đen viền",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "cost_product": [
-                "238"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "name_product": [
-                "set vest kèm quần"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 60
+            "name_product": "set sơ mi",
+            "size_product": "L",
+            "color_product": "trắng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "name_product": [
-                "đầm xòe nút"
-            ],
-            "amount_product": 9
+            "name_product": "set áo trắng cổ chữ v kèm quần",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "amount_product": 39,
-            "name_product": [
-                "đầm trắng dập ly tay phồng"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "L"
-            ]
+            "name_product": "set vest chủ tịch",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "amount_product": 43,
-            "name_product": [
-                "set vest chủ tịch"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "đầm nude ren",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "2"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "color_product": [
-                "xanh"
-            ],
-            "name_product": [
-                "set dây kèm quần"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "amount_product": 27
+            "name_product": "set body vest",
+            "size_product": "M",
+            "color_product": "hồng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "S"
-            ],
-            "name_product": [
-                "set vest chủ tịch"
-            ]
+            "name_product": "đầm sơ mi carô",
+            "size_product": "S",
+            "color_product": "carô xanh",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "280",
+            "amount_product": "2"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "set vest chủ tịch"
-            ],
-            "cost_product": [
-                "350"
-            ],
-            "size_product": [
-                "S"
-            ]
+            "name_product": "đầm nude ren",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 50
+            "name_product": "set vest kèm quần",
+            "size_product": "M",
+            "color_product": "đen",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238",
+            "amount_product": "5"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "color_product": [
-                "trắng"
-            ]
+            "name_product": "set cổ xéo",
+            "size_product": "M",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "name_product": [
-                "đầm trắng 2 dây dáng xòe"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "amount_product": 59
+            "name_product": "set body vest",
+            "size_product": "M",
+            "color_product": "hồng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "amount_product": 58,
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "color_product": [
-                "hồng"
-            ]
+            "name_product": "set sơ mi",
+            "size_product": "L",
+            "color_product": "trắng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "4"
         }
     },
     {
         "intent": "request",
         "request_slots": {},
         "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 53,
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "set xanh cỗ chữ v"
-            ],
-            "size_product": [
-                "M"
-            ]
+            "name_product": "đầm xòe nút",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set hồng vest váy ngắn",
+            "size_product": "L",
+            "color_product": "hồng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "2"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm xòe cổ nâu",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "2"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm xanh caro cổ vest",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm nude cổ vest dáng dài",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "280",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set xanh cỗ chữ v",
+            "size_product": "S",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm xòe nút",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm body vest",
+            "size_product": "L",
+            "color_product": "hồng",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm nude lưới tay phồng",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm nude lưới tay phồng",
+            "size_product": "S",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "2"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm trắng 2 dây dáng xòe",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "3"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm nude cổ vest dáng dài",
+            "size_product": "S",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "280",
+            "amount_product": "4"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set dây kèm quần",
+            "size_product": "S",
+            "color_product": "xanh",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm hoa",
+            "size_product": "L",
+            "color_product": "xanh",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "250",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set dây kèm quần",
+            "size_product": "S",
+            "color_product": "cam",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set dây kèm quần",
+            "size_product": "L",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set dây kèm quần",
+            "size_product": "M",
+            "color_product": "cam",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm xòe nút",
+            "size_product": "S",
+            "color_product": "xám",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set vest chủ tịch",
+            "size_product": "L",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "đầm xòe nút",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "1"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set dây kèm quần",
+            "size_product": "M",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "210",
+            "amount_product": "5"
+        }
+    },
+    {
+        "intent": "request",
+        "request_slots": {},
+        "inform_slots": {
+            "name_product": "set trắng cổ nơ",
+            "size_product": "M",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260",
+            "amount_product": "2"
         }
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 41
+            "name_product": "set cổ xéo",
+            "amount_product": "1"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 37
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 54
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 37
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 49
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -734,74 +725,12 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 45
+            "name_product": "đầm nude lưới tay phồng",
+            "amount_product": "5",
+            "color_product": "nude"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "color_product": [
-                "xanh"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "250"
-            ],
-            "amount_product": 51
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 63
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -809,65 +738,11 @@
     },
     {
         "inform_slots": {
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 26
+            "name_product": "set hồng vest váy ngắn",
+            "amount_product": "4"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "carô xanh"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 31
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 25
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 59
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -875,35 +750,11 @@
     },
     {
         "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "280"
-            ],
-            "amount_product": 54
+            "name_product": "đầm trắng 2 dây dáng xòe",
+            "amount_product": "3"
         },
         "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 21
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -911,115 +762,12 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 38
+            "name_product": "đầm hoa",
+            "amount_product": "3",
+            "color_product": "xanh"
         },
         "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 51
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 34
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 48
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "hồng"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 37
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1027,156 +775,12 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 46
+            "name_product": "set vest nơ viền",
+            "amount_product": "3",
+            "color_product": "đen viền"
         },
         "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "280"
-            ],
-            "amount_product": 54
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 27
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 68
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 106
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 51
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 51
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "đen viền"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 37
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1184,68 +788,11 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 49
+            "name_product": "đầm nude lưới tay phồng",
+            "amount_product": "2"
         },
         "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 49
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 106
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 49
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1253,165 +800,11 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 21
+            "name_product": "set sơ mi",
+            "amount_product": "5"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 43
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "S"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 23
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "đen"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 39
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 54
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 48
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "xanh"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 11
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 55
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 45
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1419,33 +812,11 @@
     },
     {
         "inform_slots": {
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 60
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "2"
         },
         "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 34
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1453,31 +824,11 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "350"
-            ],
-            "amount_product": 43
+            "name_product": "set cổ xéo",
+            "amount_product": "3"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 58
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1485,12 +836,11 @@
     },
     {
         "inform_slots": {
-            "amount_product": 25
+            "name_product": "đầm sơ mi carô",
+            "amount_product": "1"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1498,278 +848,11 @@
     },
     {
         "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "hồng"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 63
+            "name_product": "đầm xoắn eo",
+            "amount_product": "4"
         },
         "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 22
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "color_product": [
-                "hồng"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 68
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 66
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "carô xanh"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 31
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 25
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "S"
-            ],
-            "color_product": [
-                "đen viền"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 22
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 52
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 47
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 55
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 65
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "hồng"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 65
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 60
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1777,64 +860,11 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 46
+            "name_product": "đầm xanh caro cổ vest",
+            "amount_product": "3"
         },
         "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 31
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 30
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 5
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1842,12 +872,11 @@
     },
     {
         "inform_slots": {
-            "amount_product": 43
+            "name_product": "set dây kèm quần",
+            "amount_product": "4"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1855,12 +884,11 @@
     },
     {
         "inform_slots": {
-            "amount_product": 26
+            "name_product": "set dây kèm quần",
+            "amount_product": "2"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1868,89 +896,12 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 55
+            "name_product": "set body vest",
+            "amount_product": "4",
+            "color_product": "hồng"
         },
         "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "amount_product": 45
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 49
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 58
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -1958,76 +909,11 @@
     },
     {
         "inform_slots": {
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 54
+            "name_product": "set vest chủ tịch",
+            "amount_product": "4"
         },
         "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "color_product": [
-                "đen"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "238"
-            ],
-            "amount_product": 39
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "280"
-            ],
-            "amount_product": 55
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 41
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "size_product": "UNK",
-            "color_product": "UNK",
             "material_product": "UNK",
             "cost_product": "UNK"
         },
@@ -2035,821 +921,216 @@
     },
     {
         "inform_slots": {
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 37
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 106
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "S"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 39,
-            "cost_product": [
-                "238"
-            ],
-            "color_product": [
-                "đen"
-            ]
+            "name_product": "set vest kèm quần",
+            "amount_product": "5"
         },
         "request_slots": {
             "size_product": "UNK",
-            "name_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 43,
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "350"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "name_product": [
-                "đầm xòe cổ nâu"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 48
-        },
-        "request_slots": {
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ]
-        },
-        "request_slots": {
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 60,
-            "size_product": [
-                "S"
-            ],
-            "cost_product": [
-                "260"
-            ]
-        },
-        "request_slots": {
             "material_product": "UNK",
-            "name_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
             "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "name_product": [
-                "đầm xòe cổ nâu"
-            ],
-            "amount_product": 48
+            "name_product": "đầm xòe nút",
+            "amount_product": "3",
+            "color_product": "xám"
         },
         "request_slots": {
-            "cost_product": "UNK",
+            "size_product": "UNK",
             "material_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "trắng"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "set sơ mi"
-            ]
-        },
-        "request_slots": {
-            "size_product": "UNK",
-            "cost_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "color_product": [
-                "xanh"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "amount_product": "UNK",
-            "cost_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "amount_product": 90
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "name_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 27,
-            "cost_product": [
-                "280"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 8,
-            "color_product": [
-                "xám"
-            ]
-        },
-        "request_slots": {
-            "size_product": "UNK",
-            "cost_product": "UNK",
-            "material_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 64,
-            "name_product": [
-                "set áo trắng cổ chữ v kèm quần"
-            ]
-        },
-        "request_slots": {
-            "material_product": "UNK",
-            "color_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set dây kèm quần"
-            ],
-            "amount_product": 26,
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "210"
-            ]
-        },
-        "request_slots": {
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "amount_product": "UNK",
-            "color_product": "UNK",
-            "size_product": "UNK",
             "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "S"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 45,
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "đầm xoắn eo"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "color_product": "UNK",
-            "amount_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ]
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "3"
         },
         "request_slots": {
             "size_product": "UNK",
-            "name_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "cost_product": "UNK",
-            "amount_product": "UNK",
-            "color_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "đầm xanh caro cổ vest"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "cost_product": "UNK",
-            "size_product": "UNK",
-            "amount_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "amount_product": 64
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
             "material_product": "UNK",
-            "name_product": "UNK",
             "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "amount_product": 50
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "3"
         },
         "request_slots": {
+            "size_product": "UNK",
             "material_product": "UNK",
-            "size_product": "UNK"
+            "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "S"
-            ]
+            "name_product": "đầm xòe nút",
+            "amount_product": "1"
         },
         "request_slots": {
-            "amount_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ]
-        },
-        "request_slots": {
+            "size_product": "UNK",
             "material_product": "UNK",
-            "amount_product": "UNK",
-            "name_product": "UNK",
-            "color_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "cost_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "210"
-            ],
-            "name_product": [
-                "set dây kèm quần"
-            ],
-            "size_product": [
-                "S"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "cost_product": [
-                "210"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "name_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "M"
-            ],
-            "amount_product": 9,
-            "color_product": [
-                "xám"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
             "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "đầm nude ren"
-            ],
-            "size_product": [
-                "S"
-            ],
-            "cost_product": [
-                "260"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "amount_product": "UNK",
-            "color_product": "UNK",
-            "cost_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "name_product": [
-                "đầm xòe nút"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 35
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 54,
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "cost_product": [
-                "280"
-            ]
+            "name_product": "đầm trắng 2 dây dáng xòe",
+            "amount_product": "3"
         },
         "request_slots": {
             "size_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set dây kèm quần"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "size_product": "UNK",
-            "amount_product": "UNK",
-            "cost_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "S"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
             "material_product": "UNK",
-            "amount_product": "UNK",
-            "color_product": "UNK",
-            "name_product": "UNK"
+            "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "amount_product": 60
+            "name_product": "set vest kèm quần",
+            "amount_product": "4"
         },
         "request_slots": {
+            "size_product": "UNK",
             "material_product": "UNK",
-            "name_product": "UNK",
-            "cost_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set trắng cổ nơ"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 49
-        },
-        "request_slots": {
-            "size_product": "UNK",
             "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "name_product": [
-                "set đen kim tuyến"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
+            "name_product": "đầm body đen lưới",
+            "amount_product": "3"
         },
         "request_slots": {
-            "cost_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
             "size_product": "UNK",
-            "amount_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "250"
-            ],
-            "size_product": [
-                "L"
-            ],
-            "name_product": [
-                "đầm hoa"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "đầm body vest"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "size_product": [
-                "L"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
+            "material_product": "UNK",
             "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "đầm sơ mi carô"
-            ],
-            "color_product": [
-                "carô xanh"
-            ]
+            "name_product": "đầm nude cổ vest dáng dài",
+            "amount_product": "4",
+            "color_product": "nude"
         },
         "request_slots": {
             "size_product": "UNK",
-            "amount_product": "UNK"
+            "material_product": "UNK",
+            "cost_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "name_product": [
-                "set đen kim tuyến"
-            ],
-            "amount_product": 66
+            "name_product": "đầm body vest",
+            "amount_product": "1"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set vest kèm quần",
+            "amount_product": "2"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set dây kèm quần",
+            "amount_product": "5"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set áo trắng cổ chữ v kèm quần",
+            "amount_product": "2"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "1"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm nude ren",
+            "amount_product": "2"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set vest chủ tịch",
+            "amount_product": "3"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set trắng cổ nơ",
+            "amount_product": "1"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set đen kim tuyến",
+            "amount_product": "1",
+            "size_product": "M",
+            "cost_product": "260"
         },
         "request_slots": {
             "material_product": "UNK"
@@ -2858,198 +1139,11 @@
     },
     {
         "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "size_product": [
-                "S"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "set cổ xéo"
-            ]
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "4",
+            "material_product": "vải cao cấp, mặc mát"
         },
         "request_slots": {
-            "amount_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "đầm xanh caro cổ vest"
-            ],
-            "amount_product": 65
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "material_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set dây kèm quần"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "amount_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "amount_product": "UNK",
-            "material_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "260"
-            ],
-            "size_product": [
-                "M"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set vest kèm quần"
-            ],
-            "cost_product": [
-                "238"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 37,
-            "color_product": [
-                "đen viền"
-            ],
-            "name_product": [
-                "set vest nơ viền"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "size_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set sơ mi"
-            ],
-            "color_product": [
-                "trắng"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "cost_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set áo trắng cổ chữ v kèm quần"
-            ]
-        },
-        "request_slots": {
-            "material_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "cost_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "name_product": [
-                "đầm trắng dập ly tay phồng"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set vest kèm quần"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "material_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 49
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "name_product": "UNK",
             "cost_product": "UNK",
             "size_product": "UNK"
         },
@@ -3057,124 +1151,12 @@
     },
     {
         "inform_slots": {
-            "cost_product": [
-                "210"
-            ],
-            "name_product": [
-                "đầm nude lưới tay phồng"
-            ]
+            "name_product": "đầm hoa",
+            "amount_product": "5",
+            "color_product": "xanh",
+            "size_product": "M"
         },
         "request_slots": {
-            "size_product": "UNK",
-            "material_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set dây kèm quần"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "amount_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 41,
-            "cost_product": [
-                "260"
-            ],
-            "size_product": [
-                "L"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK",
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "material_product": "UNK",
-            "amount_product": "UNK",
-            "cost_product": "UNK",
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "color_product": [
-                "nude"
-            ],
-            "cost_product": [
-                "210"
-            ]
-        },
-        "request_slots": {
-            "name_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "amount_product": 55,
-            "size_product": [
-                "L"
-            ],
-            "name_product": [
-                "set xanh cỗ chữ v"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "color_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "M"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "đầm sơ mi carô"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK",
-            "amount_product": "UNK",
-            "cost_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {},
-        "request_slots": {
-            "amount_product": "UNK",
-            "size_product": "UNK",
-            "name_product": "UNK",
             "cost_product": "UNK",
             "material_product": "UNK"
         },
@@ -3182,111 +1164,11 @@
     },
     {
         "inform_slots": {
-            "name_product": [
-                "set áo trắng cổ chữ v kèm quần"
-            ]
+            "name_product": "set vest chủ tịch",
+            "amount_product": "1",
+            "material_product": "vải cao cấp, mặc mát"
         },
         "request_slots": {
-            "size_product": "UNK",
-            "material_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "size_product": [
-                "L"
-            ],
-            "name_product": [
-                "set sơ mi"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "name_product": "UNK",
-            "size_product": "UNK",
-            "color_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set xanh cỗ chữ v"
-            ]
-        },
-        "request_slots": {
-            "cost_product": "UNK",
-            "material_product": "UNK",
-            "amount_product": "UNK",
-            "size_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "đầm body vest"
-            ],
-            "amount_product": 64,
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ]
-        },
-        "request_slots": {
-            "color_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "name_product": [
-                "set cổ xéo"
-            ]
-        },
-        "request_slots": {
-            "size_product": "UNK",
-            "cost_product": "UNK",
-            "material_product": "UNK",
-            "amount_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "color_product": [
-                "hồng"
-            ]
-        },
-        "request_slots": {
-            "amount_product": "UNK",
-            "name_product": "UNK",
             "cost_product": "UNK",
             "size_product": "UNK"
         },
@@ -3294,16 +1176,74 @@
     },
     {
         "inform_slots": {
-            "cost_product": [
-                "260"
-            ],
-            "amount_product": 59,
-            "size_product": [
-                "L"
-            ],
-            "name_product": [
-                "đầm trắng 2 dây dáng xòe"
-            ]
+            "name_product": "đầm xoắn eo",
+            "amount_product": "1",
+            "color_product": "nude",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set hồng vest váy ngắn",
+            "amount_product": "2",
+            "color_product": "hồng",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "4",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set trắng cổ nơ",
+            "amount_product": "2",
+            "material_product": "vải cao cấp, mặc mát"
+        },
+        "request_slots": {
+            "size_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm nude cổ vest dáng dài",
+            "amount_product": "5",
+            "color_product": "nude",
+            "cost_product": "280"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm nude lưới tay phồng",
+            "amount_product": "3",
+            "color_product": "nude",
+            "size_product": "M",
+            "cost_product": "210"
         },
         "request_slots": {
             "material_product": "UNK"
@@ -3312,104 +1252,286 @@
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 52
+            "name_product": "đầm nude lưới tay phồng",
+            "amount_product": "1",
+            "color_product": "nude",
+            "size_product": "M"
         },
         "request_slots": {
-            "name_product": "UNK",
+            "cost_product": "UNK",
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm xòe cổ nâu",
+            "amount_product": "4",
+            "size_product": "M"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm nude cổ vest dáng dài",
+            "amount_product": "4",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "280"
+        },
+        "request_slots": {
             "size_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "amount_product": 58,
-            "size_product": [
-                "L"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "name_product": [
-                "set áo trắng cổ chữ v kèm quần"
-            ]
+            "name_product": "set vest chủ tịch",
+            "amount_product": "2",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "350"
         },
         "request_slots": {
-            "cost_product": "UNK"
+            "size_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "color_product": [
-                "đen"
-            ]
+            "name_product": "set đen kim tuyến",
+            "amount_product": "1",
+            "size_product": "S"
         },
         "request_slots": {
-            "cost_product": "UNK"
-        },
-        "intent": "request"
-    },
-    {
-        "inform_slots": {
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "amount_product": 58
-        },
-        "request_slots": {
-            "size_product": "UNK",
             "cost_product": "UNK",
-            "name_product": "UNK"
+            "material_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "name_product": [
-                "set vest kèm quần"
-            ],
-            "color_product": [
-                "nude"
-            ],
-            "material_product": [
-                "vải cao cấp",
-                "mịn",
-                "mặc mát"
-            ],
-            "cost_product": [
-                "238"
-            ]
+            "name_product": "set áo trắng cổ chữ v kèm quần",
+            "amount_product": "4",
+            "size_product": "S",
+            "cost_product": "260"
         },
         "request_slots": {
-            "size_product": "UNK",
-            "amount_product": "UNK"
+            "material_product": "UNK"
         },
         "intent": "request"
     },
     {
         "inform_slots": {
-            "amount_product": 55,
-            "size_product": [
-                "M"
-            ]
+            "name_product": "đầm xòe nút",
+            "amount_product": "4",
+            "color_product": "xám",
+            "size_product": "M"
         },
         "request_slots": {
             "material_product": "UNK",
             "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm xoắn eo",
+            "amount_product": "3",
+            "color_product": "nude",
+            "size_product": "M",
+            "material_product": "vải cao cấp, mặc mát"
+        },
+        "request_slots": {
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set áo trắng cổ chữ v kèm quần",
+            "amount_product": "5",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm body đen lưới",
+            "amount_product": "2",
+            "size_product": "S"
+        },
+        "request_slots": {
+            "cost_product": "UNK",
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set trắng cổ nơ",
+            "amount_product": "3",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm body đen lưới",
+            "amount_product": "3",
+            "size_product": "S",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm xòe cổ nâu",
+            "amount_product": "2",
+            "size_product": "S",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm body đen lưới",
+            "amount_product": "5",
+            "size_product": "L",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm trắng dập ly tay phồng",
+            "amount_product": "3",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm xoắn eo",
+            "amount_product": "4",
+            "color_product": "nude",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set vest nơ viền",
+            "amount_product": "5",
+            "color_product": "đen viền",
+            "size_product": "L",
+            "cost_product": "238"
+        },
+        "request_slots": {
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set vest chủ tịch",
+            "amount_product": "4",
+            "size_product": "S"
+        },
+        "request_slots": {
+            "cost_product": "UNK",
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm xòe cổ nâu",
+            "amount_product": "3",
+            "size_product": "S"
+        },
+        "request_slots": {
+            "cost_product": "UNK",
+            "material_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm nude lưới tay phồng",
+            "amount_product": "2",
+            "color_product": "nude",
+            "size_product": "M",
+            "material_product": "vải cao cấp, mặc mát"
+        },
+        "request_slots": {
+            "cost_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "đầm nude cổ vest dáng dài",
+            "amount_product": "5",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát"
+        },
+        "request_slots": {
+            "cost_product": "UNK",
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set vest kèm quần",
+            "amount_product": "1",
+            "color_product": "nude",
+            "material_product": "vải cao cấp, mặc mát",
+            "cost_product": "238"
+        },
+        "request_slots": {
+            "size_product": "UNK"
+        },
+        "intent": "request"
+    },
+    {
+        "inform_slots": {
+            "name_product": "set xanh cỗ chữ v",
+            "amount_product": "1",
+            "cost_product": "260"
+        },
+        "request_slots": {
+            "material_product": "UNK",
+            "size_product": "UNK"
         },
         "intent": "request"
     }
