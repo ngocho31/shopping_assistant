@@ -201,7 +201,11 @@ class DBQuery:
         DEBUG_PRINT("values_dict: ", values_dict)
         if values_dict:
             # Get key with max value (ie slot value with highest count of available results)
-            filled_inform[key] = max(values_dict, key=values_dict.get)
+            # filled_inform[key] = max(values_dict, key=values_dict.get)
+            if len(list(values_dict.keys())) > 1:
+                filled_inform[key] = list(values_dict.keys())
+            else:
+                filled_inform[key] = list(values_dict.keys())[0]
         else:
             filled_inform[key] = 'no match available'
         # if not db_results:

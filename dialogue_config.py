@@ -4,6 +4,12 @@
 'anything'  # means any value works for the slot with this value
 'no match available'  # When the intent of the agent is match_found yet no db match fits current constraints
 
+# All slot to be defined
+unsupport_slots = ['name_customer', 'addr_customer', 'shipping_fee',
+    'height_customer', 'weight_customer', 'phone_customer',
+    'bust_customer', 'waist_customer', 'hip_customer',
+    'delivery_time']
+
 #######################################
 # Usersim Config
 #######################################

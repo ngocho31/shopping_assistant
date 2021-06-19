@@ -1,6 +1,7 @@
 import copy
 import time
 import numpy as np
+import random
 
 from utils import DEBUG_PRINT, SAVE_LOG
 from utils import convert_list_to_dict
@@ -239,7 +240,9 @@ class StateTracker:
             #     else:
             #         value = 1
             #         agent_action['inform_slots'][key] = value
-            self.current_informs[key] = value
+            # self.current_informs[key] = value
+            if type(value) != list and value != 'no match available':
+                self.current_informs[key] = value
             # for slot in agent_action['inform_slots']:
             #     if self.current_requests.__contains__(slot):
             #         self.current_requests.remove(slot)
@@ -249,7 +252,8 @@ class StateTracker:
             db_results = self.db_helper.get_db_results(self.current_informs)
             if db_results:
                 # Arbitrarily pick the first value of the dict
-                dict_items = db_results[0]
+                # dict_items = db_results[0]
+                dict_items = random.choice(db_results)
                 agent_action['inform_slots'] = copy.deepcopy(dict_items)
                 # if 'amount_product' not in list(self.current_informs.keys()):
                 #     agent_action['inform_slots'].pop('amount_product')

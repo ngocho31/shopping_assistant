@@ -316,7 +316,11 @@ class UserSimulator:
         # informed, then inform it
         elif agent_request_key in self.goal['request_slots'] and agent_request_key in self.state['history_slots']:
             self.state['intent'] = 'inform'
-            self.state['inform_slots'][agent_request_key] = self.state['history_slots'][agent_request_key]
+            value_choice = self.state['history_slots'][agent_request_key]
+            if type(value_choice) == list:
+                value_choice = random.choice(value_choice)
+            self.state['inform_slots'][agent_request_key] = value_choice
+            self.state['history_slots'][agent_request_key] = value_choice
             self.state['request_slots'].clear()
             assert agent_request_key not in self.state['rest_slots']
             DEBUG_PRINT(self.state['inform_slots'])
