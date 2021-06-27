@@ -1,13 +1,13 @@
 import random
 
 from utils import DEBUG_PRINT, SAVE_LOG
-from dialogue_config import usersim_intents
+from dialogue_config import usersim_intents, size_slots
 
 
 class ErrorModelController:
     """Adds error to the user action."""
 
-    def __init__(self, db_dict, constants):
+    def __init__(self, db_dict, size_db_dict, constants):
         """
         The constructor for ErrorModelController.
 
@@ -21,10 +21,12 @@ class ErrorModelController:
 
         # print("caller ErrorModelController __init__")
         self.shopping_dict = db_dict
+        self.size_shopping_dict = size_db_dict
         self.slot_error_prob = constants['emc']['slot_error_prob']
         self.slot_error_mode = constants['emc']['slot_error_mode']  # [0, 3]
         self.intent_error_prob = constants['emc']['intent_error_prob']
         self.intents = usersim_intents
+        self.size_slots = size_slots
 
     def infuse_error(self, frame):
         """
@@ -41,7 +43,7 @@ class ErrorModelController:
         # print("caller ErrorModelController infuse_error")
         informs_dict = frame['inform_slots']
         for key in list(frame['inform_slots'].keys()):
-            assert key in self.shopping_dict
+            assert key in self.shopping_dict or key in self.size_shopping_dict
             if random.random() < self.slot_error_prob:
                 if self.slot_error_mode == 0:  # replace the slot_value only
                     self._slot_value_noise(key, informs_dict)
@@ -73,7 +75,12 @@ class ErrorModelController:
         """
 
         # print("caller ErrorModelController _slot_value_noise")
-        informs_dict[key] = random.choice(self.shopping_dict[key])
+        if key in size_slots:
+            noise_value = random.choice(self.size_shopping_dict[key])
+        else:
+            noise_value = random.choice(self.shopping_dict[key])
+
+        informs_dict[key] = noise_value
         # val = random.choice(self.shopping_dict[key])
         # if key == 'amount_product':
         #     informs_dict.update({key: val})
@@ -91,8 +98,12 @@ class ErrorModelController:
 
         # print("caller ErrorModelController _slot_noise")
         informs_dict.pop(key)
-        random_slot = random.choice(list(self.shopping_dict.keys()))
-        informs_dict[random_slot] = random.choice(self.shopping_dict[random_slot])
+        if key in size_slots:
+            random_slot = random.choice(list(self.size_shopping_dict.keys()))
+            informs_dict[random_slot] = random.choice(self.size_shopping_dict[random_slot])
+        else:
+            random_slot = random.choice(list(self.shopping_dict.keys()))
+            informs_dict[random_slot] = random.choice(self.shopping_dict[random_slot])
         # val = random.choice(self.shopping_dict[random_slot])
         # informs_dict[random_slot] = [val]
 

@@ -30,7 +30,9 @@ if __name__ == "__main__":
     # Load file path constants
     file_path_dict = constants['db_file_paths']
     DATABASE_FILE_PATH = file_path_dict['database']
+    SIZE_DATABASE_FILE_PATH = file_path_dict['size_database']
     DICT_FILE_PATH = file_path_dict['dict']
+    SIZE_DICT_FILE_PATH = file_path_dict['size_dict']
     USER_GOALS_FILE_PATH = file_path_dict['user_goals']
     DIALOG_FILE_PATH = file_path_dict['dialogs']
 
@@ -44,6 +46,8 @@ if __name__ == "__main__":
 
     # Load product DB
     database= json.load(open(DATABASE_FILE_PATH, encoding='utf-8'))
+    # Load size DB
+    size_database= json.load(open(SIZE_DATABASE_FILE_PATH, encoding='utf-8'))
 
     # Load product dict
     # db_dict = json.load(open(DICT_FILE_PATH, encoding='utf-8'))
@@ -56,10 +60,10 @@ if __name__ == "__main__":
 
     # Init. Objects
     if USE_USERSIM:
-        user = UserSimulator(user_goals, constants, database)
+        user = UserSimulator(user_goals, constants, database, size_database)
     else:
         user = User(constants)
-    state_tracker = StateTracker(database, constants)
+    state_tracker = StateTracker(database, size_database, constants)
     dqn_agent = DQNAgent(state_tracker.get_state_size(), constants)
 
 

@@ -374,8 +374,6 @@ class DQNAgent:
 
         prop = self._dqn_predict_one(state)
         # DEBUG_PRINT("prop action = ", prop)
-        SAVE_LOG("state = ", state, filename='test.log')
-        SAVE_LOG("prop action = ", prop, filename='test.log')
         index = np.argmax(self._dqn_predict_one(state))
         action = self._map_index_to_action(index)
         return index, action

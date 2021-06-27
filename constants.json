@@ -1,7 +1,9 @@
 {
   "db_file_paths": {
     "database": "data/hume_db.json",
+    "size_database": "data/hume_size_db.json",
     "dict": "data/hume_dict.json",
+    "size_dict": "data/hume_size_dict.json",
     "user_goals": "data/user_goals.json",
     "dialogs": "data/dialogs.json"
   },

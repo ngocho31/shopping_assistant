@@ -3,12 +3,12 @@ import random, copy, yaml, ast
 from utils import DEBUG_PRINT, SAVE_LOG
 from utils import reward_function, check_match_sublist_and_substring
 from dialogue_config import FAIL, NO_OUTCOME, SUCCESS
-from dialogue_config import usersim_default_key, usersim_required_init_inform_keys, no_query_keys, request_product_entity
+from dialogue_config import usersim_default_key, usersim_required_init_inform_keys, no_query_keys, request_product_entity, size_slots
 
 class UserSimulator:
     """Simulates a real user, to train the agent with reinforcement learning."""
 
-    def __init__(self, goal_list, constants, database):
+    def __init__(self, goal_list, constants, database, size_database):
         """
         The constructor for UserSimulator. Sets dialogue config variables.
 
@@ -28,9 +28,11 @@ class UserSimulator:
 
         # TEMP ----
         self.database = database
+        self.size_database = size_database
         # ---------
 
         self.constraint_entity = request_product_entity
+        self.size_slots = size_slots
 
 
     """Warmup phase."""
@@ -470,7 +472,7 @@ class UserSimulator:
             # elif not check_match_sublist_and_substring(value, agent_informs.get(key, None)):
             #     self.constraint_check = FAIL
             #     break
-            if value != agent_informs.get(key, None):
+            if key not in self.size_slots and value != agent_informs.get(key, None):
                 self.constraint_check = FAIL
                 break
 
@@ -498,8 +500,10 @@ class UserSimulator:
         if self.state['rest_slots']:
             # for key, val in self.state['rest_slots'].items():
             #     if val == 'UNK':
-            DEBUG_PRINT("fail remain slots")
-            return FAIL
+            for key in list(self.state['rest_slots'].keys()):
+                if key not in self.size_slots:
+                    DEBUG_PRINT("fail remain slots, ", self.state['rest_slots'])
+                    return FAIL
 
         # TEMP: ----
         assert self.state['history_slots'][self.default_key] != 'no match available'
@@ -510,7 +514,7 @@ class UserSimulator:
 
         for key, value in self.goal['inform_slots'].items():
             assert value != None
-            if key in self.no_query:
+            if key in self.no_query or key in self.size_slots:
                 continue
             # if key == "amount_product":
             #     if value > match.get(key, None):

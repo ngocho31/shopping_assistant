@@ -10,6 +10,13 @@ unsupport_slots = ['name_customer', 'addr_customer', 'shipping_fee',
     'bust_customer', 'waist_customer', 'hip_customer',
     'delivery_time']
 
+size_slots = [# "size_customer", 
+    # "bust_customer", 
+    "waist_customer", 
+    # "hip_customer", 
+    "height_customer", "weight_customer"
+]
+
 #######################################
 # Usersim Config
 #######################################
@@ -28,13 +35,12 @@ usersim_required_init_inform_keys = ['name_product']
 #######################################
 
 # Possible inform and request slots for the agent
-agent_inform_slots = ['name_product', 'size_product', 'color_product', 
-                    'material_product', 'cost_product', 
+agent_inform_slots = ['name_product', 'size_product', 'color_product', 'material_product', 'cost_product', 
                     # 'amount_product', 
-                    usersim_default_key]
+                    ] + [usersim_default_key]
 # agent_inform_slots = ['cost_product']
 agent_request_slots = ['name_product', 'size_product', 'color_product', 
-                    'material_product', 'cost_product', 'amount_product']
+                    'material_product', 'cost_product', 'amount_product'] + size_slots
 
 # Possible actions for agent
 agent_actions = [
@@ -50,7 +56,7 @@ for slot in agent_request_slots:
     agent_actions.append({'intent': 'request', 'inform_slots': {}, 'request_slots': {slot: 'UNK'}})
 
 # Rule-based policy request list
-rule_requests = ['name_product', 'size_product', 'color_product', 
+rule_requests = ['name_product', 'size_product'] + size_slots + ['color_product', 
                 'material_product', 'cost_product', 'amount_product']
 
 # These are possible inform slot keys that cannot be used to query
@@ -74,7 +80,7 @@ all_intents = ['inform', 'request', 'done', 'match_found', 'ok', 'reject']
 
 # All possible slots (for one-hot conversion in ST.get_state())
 all_slots = ['name_product', 'size_product', 'color_product', 
-'cost_product', 'material_product', 'amount_product', usersim_default_key]
+'cost_product', 'material_product', 'amount_product'] + size_slots + [usersim_default_key]
 
 # All constraints slots for request product info goal
 request_product_entity = {

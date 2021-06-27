@@ -12,7 +12,7 @@ from dialogue_config import request_product_entity
 class StateTracker:
     """Tracks the state of the episode/conversation and prepares the state representation for the agent."""
 
-    def __init__(self, database, constants):
+    def __init__(self, database, size_database, constants):
         """
         The constructor of StateTracker.
 
@@ -25,7 +25,7 @@ class StateTracker:
 
         """
 
-        self.db_helper = DBQuery(database)
+        self.db_helper = DBQuery(database, size_database)
         self.match_key = usersim_default_key
         self.intents_dict = convert_list_to_dict(all_intents)
         self.num_intents = len(all_intents)
